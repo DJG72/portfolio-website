@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debjit Ghosh | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #020202; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; overflow-x: hidden; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal-on-scroll { opacity: 0; transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+        .reveal-on-scroll.active { opacity: 1; transform: translateY(0); animation: fadeInUp 0.8s forwards; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        #cursor-glow {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.07) 0%, transparent 70%);
+            position: fixed; pointer-events: none; transform: translate(-50%, -50%); z-index: 10;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+    <div id="cursor-glow"></div>
+
+    <!-- FLOATING NAV -->
+    <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50">
+        <div class="glass px-8 py-3 rounded-full flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase">
+            <a href="#" class="hover:text-blue-400 transition">Identity</a>
+            <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+            <a href="#certificate" class="hover:text-blue-400 transition">Certificate</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="h-screen flex flex-col items-center justify-center text-center px-6 relative">
+        <div class="relative group mb-10 reveal-on-scroll active">
+            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-[2.5rem] blur opacity-20 group-hover:opacity-60 transition duration-1000"></div>
+            <!-- Identity image: Rename your file to profile.jpg -->
+            <img src="picture.jpg" class="relative w-44 h-44 rounded-[2.5rem] object-cover border border-white/10 shadow-2xl">
+        </div>
+        
+        <h1 class="text-7xl md:text-9xl font-extrabold tracking-tighter mb-4 reveal-on-scroll active">
+            DEBJIT <span class="text-gradient">GHOSH</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl font-light tracking-wide max-w-2xl leading-relaxed reveal-on-scroll active">
+            B.Tech CSE Student at <strong>Techno India Salt Lake</strong>. 
+            Specializing in DSA, problem-solving, and scalable system design.
+        </p>
+        <div class="mt-8 flex gap-4 reveal-on-scroll active">
+            <a href="https://github.com/DJG72" class="px-8 py-3 glass rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition">GitHub</a>
+              <a href="https://www.linkedin.com/in/debjit-ghosh-aa2964280" class="px-8 py-3 glass rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white/5 transition">LinkedIn</a>
+            <a href="mailto:ghoshdjg2005@gmail.com" class="px-8 py-3 bg-blue-600 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition">Contact</a>
+        </div>
+    </section>
+
+    <!-- BENTO GRID: STRENGTHS & LANGUAGES -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Key Strengths -->
+        <div class="md:col-span-2 glass p-12 rounded-[3.5rem] reveal-on-scroll">
+            <h3 class="text-blue-500 font-mono text-xs uppercase tracking-widest mb-8">Key Strengths</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="font-bold text-lg mb-2 italic">Analytical</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">Strong problem-solving & structural thinking.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-2 italic">Adaptive</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">Ability to learn and adapt quickly to tech.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-2 italic">Collaborative</h4>
+                    <p class="text-gray-500 text-xs leading-relaxed">Effective team synergy and communication.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Languages -->
+        <div class="glass p-12 rounded-[3.5rem] reveal-on-scroll" style="animation-delay: 0.2s">
+            <h3 class="text-purple-400 font-mono text-xs uppercase tracking-widest mb-8">Languages</h3>
+            <ul class="space-y-3 text-sm font-bold">
+                <li class="flex justify-between items-center">BENGALI <span class="text-[10px] text-gray-500 font-mono">NATIVE</span></li>
+                <li class="flex justify-between items-center">HINDI <span class="text-[10px] text-gray-500 font-mono">FLUENT</span></li>
+                <li class="flex justify-between items-center text-blue-400">ENGLISH <span class="text-[10px] text-gray-500 font-mono">PROFESSIONAL</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-20 space-y-12">
+        <h2 class="text-4xl font-extrabold mb-12 reveal-on-scroll">Project Portfolio</h2>
+        
+        <!-- ResearchNest -->
+        <div class="glass p-12 md:p-16 rounded-[4rem] group relative overflow-hidden reveal-on-scroll">
+            <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1">
+                    <span class="text-blue-500 font-mono text-sm tracking-widest">01 // FULL-STACK</span>
+                    <h3 class="text-5xl font-black mt-4 mb-6">ResearchNest</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        Developed a scalable Online Conference Publication System using <strong>Django</strong> and <strong>MySQL</strong>. Implemented efficient data handling and workflow automation.
+                    </p>
+                    <a href="https://github.com/DJG72/Online-Conference-Publication-System-Researchnest-" class="text-white underline underline-offset-8 decoration-blue-500 font-bold hover:text-blue-400 transition">GITHUB SOURCE</a>
+                </div>
+                <div class="hidden md:flex opacity-10 text-9xl font-black text-blue-500 group-hover:scale-110 transition duration-700">RN</div>
+            </div>
+        </div>
+
+        <!-- AWS Polly -->
+        <div class="glass p-12 md:p-16 rounded-[4rem] group relative overflow-hidden reveal-on-scroll" style="animation-delay: 0.2s">
+            <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                <div class="hidden md:flex opacity-10 text-9xl font-black text-orange-500 group-hover:scale-110 transition duration-700">TTS</div>
+                <div class="flex-1">
+                    <span class="text-orange-500 font-mono text-sm tracking-widest">02 // CLOUD</span>
+                    <h3 class="text-5xl font-black mt-4 mb-6 text-white">AWS Polly TTS</h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        Built application integrating <strong>AWS Polly API</strong> for speech generation. Enabled real-time text-to-voice conversion with cloud API handling.
+                    </p>
+                    <a href="https://github.com/ghoshnirnay/Amzon_polly_text_to_speech" class="text-white underline underline-offset-8 decoration-blue-500 font-bold hover:text-blue-400 transition">GITHUB SOURCE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & CERTIFICATIONS (THE RESUME SECTION) -->
+    <section id="certificate" class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Deloitte Experience -->
+        <div class="space-y-6">
+            <h3 class="text-blue-500 font-mono text-xs uppercase tracking-[0.3em] mb-10">Internships</h3>
+            <div class="glass p-10 rounded-[3rem] reveal-on-scroll">
+                <div class="flex justify-between items-start mb-6">
+                    <h4 class="text-2xl font-bold">Deloitte</h4>
+                    <span class="text-blue-500 font-mono text-xs">2025</span>
+                </div>
+                <ul class="text-xs text-blue-600 space-y-5 leading-relaxed">
+                    <li>• Cyber Job Simulation (Jul 2025)</li>
+                    <li>• Technology Job Simulation (Jun - Jul 2025)</li>
+                    <li>• Data Analytics Job Simulation (Jun - Jul 2025)</li>
+                    <li class="text-white mt-5 italic">Applied structured problem-solving to real-world cybersecurity and analytics problems.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="space-y-6">
+            <h3 class="text-purple-400 font-mono text-xs uppercase tracking-[0.3em] mb-10">Expertise</h3>
+            <div class="glass p-10 rounded-[3rem] reveal-on-scroll" style="animation-delay: 0.2s">
+                <div class="grid grid-cols-1 gap-6 text-sm">
+                    <div class="flex justify-between border-b border-white/5 pb-3">
+                        <span>Programming in Java (NPTEL)</span>
+                        <span class="text-blue-400 font-bold">93%</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-3">
+                        <span>Python & Django (Web Dev)</span>
+                        <span class="text-blue-400 font-bold">A++</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-3">
+                        <span>AI & Machine Learning</span>
+                        <span class="text-blue-400 font-bold">A+</span>
+                    </div>
+                    <div class="flex justify-between border-b border-white/5 pb-3">
+                        <span>DCA Diploma</span>
+                        <span class="text-blue-400 font-bold">93.5%</span>
+                    </div>
+                    <div class="text-[12px] text-blue-600 uppercase tracking-widest pt-2">
+                        + DBMS, Software Engineering (NPTEL)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL FOOTER: EDUCATION STATS -->
+    <footer class="py-32 px-6 border-t border-white/5 text-center">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 reveal-on-scroll">
+            <div>
+                <div class="text-4xl font-bold text-white">8.13</div>
+                <div class="text-[15px] text-blue-500 uppercase tracking-widest mt-2">B.Tech CGPA</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-white">91.00%</div>
+                <div class="text-[15px] text-blue-500 uppercase tracking-widest mt-2">Secondary</div>
+            </div>
+            <div>
+                <div class="text-4xl font-bold text-white">86.80%</div>
+                <div class="text-[15px] text-blue-500 uppercase tracking-widest mt-2">Sr. Secondary</div>
+            </div>
+        </div>
+        
+        <p class="text-purple-600 text-[15px] tracking-[0.4em] lowercase mb-8">ghoshdjg2005@gmail.com • +91 8345059335</p>
+        <div class="flex justify-center gap-6 text-sm font-bold opacity-50 hover:opacity-100 transition">
+            <a href="https://www.linkedin.com/in/debjit-ghosh-aa2964280">LINKEDIN</a>
+            <a href="https://github.com/DJG72">GITHUB</a>
+        </div>
+    </footer>
+
+    <script>
+        // Cursor Follower
+        const glow = document.getElementById('cursor-glow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
