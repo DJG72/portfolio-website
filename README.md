@@ -10,7 +10,7 @@ This project represents my journey as a **Computer Science Engineering student**
 
 ## 🌐 Live Demo
 
-🔗 https://your-username.github.io/portfolio-website/
+🔗 https://DJG72.github.io/portfolio-website/
 
 ---
 
